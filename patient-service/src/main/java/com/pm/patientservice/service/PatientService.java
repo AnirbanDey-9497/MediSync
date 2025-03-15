@@ -1,5 +1,6 @@
 package com.pm.patientservice.service;
 
+import com.pm.patientservice.dto.PatientRequestDTO;
 import com.pm.patientservice.dto.PatientResponseDTO;
 import com.pm.patientservice.mapper.PatientMapper;
 import com.pm.patientservice.model.Patient;
@@ -22,5 +23,14 @@ public class PatientService {
         List<PatientResponseDTO> patientResponseDTOS= patients.stream().map(patient -> PatientMapper.toDTO(patient)).toList();
 
         return patientResponseDTOS;
+    }
+
+    public PatientResponseDTO createPatient(PatientRequestDTO patientRequestDTO)
+    {
+        if(patientRepository.existsByEmail(patientRequestDTO.getEmail())){
+            throw new EmailAlreadyExistsException("A patient with this email"+"already exists"+patientRequestDTO.getEmail());
+        }
+        Patient newpPatient=patientRepository.save(PatientMapper.toModel(patientRequestDTO));
+        return PatientMapper.toDTO(newpPatient);
     }
 }
