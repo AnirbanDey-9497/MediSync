@@ -16,3 +16,6 @@ Add h2 Database to our patient-service project
 
 
 Swagger For API Documentation
+
+https://springdoc.org
+springdoc-openapi v2.8.5
