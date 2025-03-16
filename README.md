@@ -13,3 +13,6 @@ Dependencies:
 <img width="362" alt="Screenshot 2025-03-14 at 9 34 28 PM" src="https://github.com/user-attachments/assets/6e09f11b-9f2e-4aa8-9e20-b45eda98b375" />
 
 Add h2 Database to our patient-service project
+
+
+Swagger For API Documentation
