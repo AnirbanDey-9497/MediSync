@@ -19,3 +19,12 @@ Swagger For API Documentation
 
 https://springdoc.org
 springdoc-openapi v2.8.5
+
+UI: http://localhost:4000/v3/api-docs
+
+Swagger Editor: https://editor-next.swagger.io
+
+So Far running Database in Local in H2 but it does not replicate production environment so we are using Docker.
+
+Use these from Docker:
+https://hub.docker.com/_/postgres
