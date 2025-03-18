@@ -8,7 +8,7 @@ service BillingService {
 }
 
 message BillingRequest {
-  string patientID = 1;
+  string patientId = 1;
   string name = 2;
   string email =3;
 }
