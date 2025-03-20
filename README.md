@@ -28,3 +28,6 @@ So Far running Database in Local in H2 but it does not replicate production envi
 
 Use these from Docker:
 https://hub.docker.com/_/postgres
+
+Kafka Decoding for byte array
+https://www.base64decode.org
