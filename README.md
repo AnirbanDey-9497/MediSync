@@ -34,3 +34,6 @@ https://www.base64decode.org
 
 Decode JWT token:
 https://jwt.io
+
+Integration Testing:
+https://rest-assured.io
