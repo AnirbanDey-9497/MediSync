@@ -31,3 +31,6 @@ https://hub.docker.com/_/postgres
 
 Kafka Decoding for byte array
 https://www.base64decode.org
+
+Decode JWT token:
+https://jwt.io
