@@ -37,3 +37,8 @@ https://jwt.io
 
 Integration Testing:
 https://rest-assured.io
+
+AWS Commands:
+aws --version
+aws configure
+ aws --endpoint-url=http://localhost:4566 lambda list-functions
