@@ -12,6 +12,7 @@ public class AuthIntegrationTest {
         RestAssured.baseURI="http://localhost:4004";
     }
 
+    //Happy Path
     @Test
     public void shouldReturnOkWithValidToken() {
         String loginPayLoad = """
@@ -26,5 +27,18 @@ public class AuthIntegrationTest {
         System.out.println("Generated Token:" + response.jsonPath().getString("token"));
     }
 
+    //Sad Path
+    @Test
+    public void shouldReturnUnauthorizedOnInvalidLogin() {
+        String loginPayLoad = """
+                {
+                    "email":"invalid_user@test.com",
+                    "password":"wrongpassword"
+                }
+                """;
+
+       given().contentType("application/json").body(loginPayLoad).when().post("/auth/login").then().statusCode(401);
+
+    }
 
 }
