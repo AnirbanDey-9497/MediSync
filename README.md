@@ -121,6 +121,22 @@ The system consists of the following microservices:
   - AWS MSK for Kafka
   - AWS RDS for PostgreSQL
 
+## Docker & Containerization
+
+All MediSync Pro microservices are fully containerized using Docker. Each service has its own multi-stage Dockerfile, which:
+- Builds the service JAR using Maven in a builder stage
+- Runs the service in a lightweight OpenJDK 21 container
+- Exposes the appropriate port for each service
+
+This approach ensures clean builds, small images, and fast startup. All services are designed to run together on a shared Docker network, enabling REST, gRPC, and Kafka communication between containers.
+
+The system is ready for orchestration with Docker Compose, Kubernetes, or AWS ECS. For local development, you can easily define a `docker-compose.yml` to spin up all services, databases, and Kafka together.
+
+**Benefits:**
+- Consistent, reproducible environments
+- Easy local development and testing
+- Seamless transition to cloud deployment
+
 ## Prerequisites
 
 1. **Required Software**:
